@@ -25,7 +25,7 @@
 <body>
 <div class="wrap">
 <h1>괴담톡 개인정보처리방침</h1>
-<p class="sub">앱: 괴담톡 (무서운 이야기를 채팅 형식으로 재생하는 앱) · 개발자: YounSH_develop · 시행일: 2026년 8월 25일 · 최종 개정: 2026년 9월 27일 (코인 복구용 결제 장부 추가, 광고 설명 정정)</p>
+<p class="sub">앱: 괴담톡 (무서운 이야기를 채팅 형식으로 재생하는 앱) · 개발자: YounSH_develop · 시행일: 2026년 8월 25일 · 최종 개정: 2026년 9월 29일 (Google Analytics for Firebase 익명 사용 통계 추가)</p>
 
 <h2>1. 개요</h2>
 <p>괴담톡은 회원가입 없이 사용하는 앱으로, 이름·이메일·전화번호 등 <strong>개인을 식별할 수 있는 정보를 수집하지 않습니다</strong>. 이 문서는 앱이 다루는 정보와 그 처리 방식을 설명합니다.</p>
@@ -45,6 +45,7 @@
   <li>광고 식별자(ADID), 기기 정보 — Google AdMob 광고 표시 과정에서</li>
   <li>구매 내역 — Google Play 결제 처리 과정에서</li>
   <li>익명 인증 식별자(Firebase 익명 UID), 기기 정보 — Firebase(Google)로 업데이트·공지 정보를 읽고 설치 수(누적·일별 개수만)와 이야기별 읽기 통계(각 화를 시작한 기기 수·끝까지 읽은 기기 수·잠금을 연 방법별 개수 — 개수만, 누가 읽었는지는 기록하지 않음)를 집계하는 과정에서</li>
+  <li>앱 이용 기록(이야기 화를 시작·완독한 사실, 코인으로 화를 연 사실, 앱 실행·인앱 결제·광고 노출 같은 기본 사용 이벤트), 앱 인스턴스 ID, 광고 식별자(ADID), 기기 정보 — Google Analytics for Firebase가 익명 사용 통계를 내는 과정에서. 플레이 스토어에서 설치한 앱에서만 수집하며, 이름·연락처 등 개인을 특정하는 정보는 보내지 않습니다.</li>
 </ul>
 </div>
 <div class="card">
@@ -66,7 +67,7 @@
 </ul>
 <p class="muted">기기 모델명·광고 식별자·기기 식별자 등 개인이나 기기를 특정할 수 있는 정보는 포함되지 않으며, 개발자의 알림 채널(Discord)로 전송된 뒤 설치 추이 확인 외의 용도로 사용되지 않고 제3자에게 제공되지 않습니다.</p>
 </div>
-<p class="muted">앱 자체 서버는 존재하지 않으며, 위 1회 전송 정보, 설치 수·이야기별 읽기 통계 집계, 코인 복구용 결제 장부 외에 개발자가 별도로 수집·보관하는 정보는 없습니다. 앱은 시작 시 Firebase에서 업데이트·공지 정보를 읽어 오며, 이 과정에서 사용자 정보를 보내지 않습니다.</p>
+<p class="muted">앱 자체 서버는 존재하지 않으며, 위 1회 전송 정보, 설치 수·이야기별 읽기 통계 집계, Google Analytics for Firebase 익명 사용 통계, 코인 복구용 결제 장부 외에 개발자가 별도로 수집·보관하는 정보는 없습니다. 앱은 시작 시 Firebase에서 업데이트·공지 정보를 읽어 오며, 이 과정에서 사용자 정보를 보내지 않습니다.</p>
 
 <h2>3. 정보의 이용 목적</h2>
 <ul>
@@ -75,13 +76,14 @@
   <li>보상형 광고 제공 (사용자가 선택한 경우에만 재생)</li>
   <li>코인 구매 등 인앱 결제 처리</li>
   <li>폰 교체·앱 재설치 시 주문번호로 코인과 코인으로 연 회차 복구</li>
+  <li>익명 사용 통계로 앱을 개선하고 광고 성과를 측정 (예: 광고를 보고 설치한 사용자가 첫 화를 끝까지 읽었는지)</li>
 </ul>
 
 <h2>4. 앱 권한</h2>
 <ul>
   <li><strong>알림(POST_NOTIFICATIONS)</strong> — 열람권 충전 완료를 알려드리기 위해 사용하며, 거부해도 앱 이용에 지장이 없습니다.</li>
   <li><strong>진동(VIBRATE)</strong> — 이야기 연출 효과에 사용합니다.</li>
-  <li><strong>인터넷(INTERNET 등)</strong> — 광고 로드, 결제 처리, 업데이트·공지 확인, 설치 수·이야기별 읽기 통계 집계, 코인 복구용 결제 장부 기록, 최초 실행 1회 설치 알림에 사용합니다.</li>
+  <li><strong>인터넷(INTERNET 등)</strong> — 광고 로드, 결제 처리, 업데이트·공지 확인, 설치 수·이야기별 읽기 통계 집계, 익명 사용 통계 전송, 코인 복구용 결제 장부 기록, 최초 실행 1회 설치 알림에 사용합니다.</li>
 </ul>
 
 <h2>5. 제3자 서비스</h2>
@@ -89,7 +91,8 @@
 <ul>
   <li>Google AdMob (보상형·앱 오픈·전면 광고) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></li>
   <li>Google Play 결제 (인앱 결제) — 앱은 카드 번호 등 결제 수단 정보를 저장하지 않습니다.</li>
-  <li>Firebase (Firestore·익명 인증) — 업데이트·긴급 공지 확인, 설치 수·이야기별 읽기 통계 집계, 코인 복구용 결제 장부 — <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보 보호</a></li>
+  <li>Google Analytics for Firebase (익명 사용 통계, 광고 성과 측정) — <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google이 파트너 앱의 정보를 사용하는 방식</a></li>
+  <li>Firebase (Firestore·익명 인증) —업데이트·긴급 공지 확인, 설치 수·이야기별 읽기 통계 집계, 코인 복구용 결제 장부 — <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보 보호</a></li>
 </ul>
 
 <h2>6. 데이터 보관 및 삭제</h2>
@@ -112,7 +115,7 @@
 <h2>10. 연락처</h2>
 <p>개인정보 처리에 관한 문의: <a href="mailto:shyoun040728@gmail.com">shyoun040728@gmail.com</a></p>
 
-<footer>YounSH_develop · 괴담톡 · 최종 수정 2026-08-25</footer>
+<footer>YounSH_develop · 괴담톡 · 최종 수정 2026-09-29</footer>
 </div>
 </body>
 </html>
